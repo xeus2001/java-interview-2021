@@ -48,6 +48,11 @@ public class HttpRequest implements Runnable, Tasks {
     return null;
   }
 
+  public int findMissing(int[] integers) {
+    // TODO: Implement me as defined in the documentation.
+    throw new UnsupportedOperationException("findMissing is not implemented yet");
+  }
+
   @Override
   public int[] generateRandomData(int min, int max, int size, boolean ascending) {
     // TODO: Implement me so that it always return the same instance
@@ -78,8 +83,11 @@ public class HttpRequest implements Runnable, Tasks {
       // TODO: Implement count
       sendResponse(501, "Not Implemented", "We need to implement count");
     } else if ("GET".equals(method) && uri.startsWith("/find")) {
-      // TODO: Implement find (indexOf)
-      sendResponse(501, "Not Implemented", "We need to implement find using indexOf method");
+      // TODO: Implement findMissing
+      sendResponse(501, "Not Implemented", "We need to implement find");
+    } else if ("GET".equals(method) && uri.startsWith("/indexOf")) {
+      // TODO: Implement indexOf
+      sendResponse(501, "Not Implemented", "We need to implement indexOf");
     }
     if ("GET".equals(method) && uri.startsWith("/status")) {
       // TODO: Implement some overview of sever statistics, so:

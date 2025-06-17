@@ -9,6 +9,16 @@ import java.util.Map;
 public interface Tasks {
 
   /**
+   * Given a list of integers with incomplete pairs, find the missing integer.
+   * <p>
+   * Assume a list like {@code [3, 4, 5, 6, 3, 5, 6]} is given, the method should return {@code 4}.
+   * @param integers A list of integer pairs, with one element missing, e.g. {@code [3, 4, 5, 6, 3, 5, 6]}.
+   * @return the missing integer, for example {@code 4}.
+   * @throws IllegalArgumentException if the given argument is invalid.
+   */
+  int findMissing(int[] integers);
+
+  /**
    * Before the search can be implemented you should generate a sorted int-array. The array should contain random values between min and max, but no value must be contained multiple times.
    * <p>
    * BONUS: If min is bigger than max, reverse the sort order from ascending to descending!
